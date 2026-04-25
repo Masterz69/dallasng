@@ -47,7 +47,7 @@ namespace esphome
 
     void DallasNgComponent::dump_config()
     {
-      ESP_LOGCONFIG(TAG, "DallasComponent:");
+      ESP_LOGI(TAG, "DallasComponent:");
       LOG_PIN("  Pin: ", this->pin_);
       LOG_UPDATE_INTERVAL(this);
 
@@ -57,10 +57,10 @@ namespace esphome
       }
       else
       {
-        ESP_LOGD(TAG, "  Found sensors:");
+        ESP_LOGI(TAG, "  Found sensors:");
         for (auto &address : this->found_sensors_)
         {
-          ESP_LOGD(TAG, "    0x%s", format_hex(address).c_str());
+          ESP_LOGI(TAG, "    0x%s", format_hex(address).c_str());
         }
       }
 
